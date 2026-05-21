@@ -1,5 +1,53 @@
 remote_theme: pages-themes/cayman@v0.2.0
+
 plugins:
-- jekyll-remote-theme # add this line to the plugins list if you already have one
-title: Emidio's homepage
-description: Bookmark this to keep an eye on my project updates!
+  - jekyll-remote-theme
+
+# ── Site identity ──────────────────────────────────────────────────────────────
+title: "Emidio Reggiani"
+description: "Developer · Italy · Self-hosted enthusiast"
+url: "https://emidio.github.io"
+
+# ── Header buttons (shown in the Cayman header) ────────────────────────────────
+show_downloads: false
+
+header_pages:
+  - index.md
+
+# Cayman supports up to two custom buttons via these keys:
+github:
+  is_project_page: false
+  owner_url: "https://github.com/Emidio"
+
+# ── SEO / social ───────────────────────────────────────────────────────────────
+author:
+  name:    "Emidio Reggiani"
+  url:     "https://emidio.reggiani.link"
+  twitter: ""
+
+social:
+  name:  "Emidio Reggiani"
+  links:
+    - "https://github.com/Emidio"
+    - "https://emidio.reggiani.link"
+    - "https://it.linkedin.com/in/emidioreggiani"
+    - "https://www.instagram.com/pdor70/"
+
+# ── Build settings ─────────────────────────────────────────────────────────────
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+
+# Allow raw HTML blocks in Markdown (needed for the styled <div> sections)
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+# ── Exclude from build ─────────────────────────────────────────────────────────
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
